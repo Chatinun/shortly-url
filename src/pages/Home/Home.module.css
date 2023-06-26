@@ -1,0 +1,184 @@
+.hero-section {
+  height: 700px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-info {
+  width: 40%;
+}
+
+.hero-section img {
+  right: -250px;
+  width: 900px;
+  height: auto;
+  position: absolute;
+  z-index: -1;
+}
+
+.hero-section button {
+  margin-top: 2.5rem;
+  font-size: 1.25rem;
+  padding: 0.75rem 2.5rem;
+}
+
+.stat-wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.stat-info {
+  width: 50%;
+  margin: 5rem auto 5rem auto;
+}
+
+.stat-card {
+  display: flex;
+  gap: 1.5rem;
+  height: 400px;
+  margin-bottom: 5rem;
+  justify-content: centers;
+}
+
+.card {
+  background-color: white;
+  position: relative;
+  padding: 4rem 2rem 2rem 2rem;
+  text-align: start;
+  border-radius: 0.5rem;
+  height: min-content;
+}
+
+.card-icon {
+  background-color: var(--primary-violet);
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -3rem;
+  left: 2rem;
+}
+
+.card[custom-type="brand"] {
+  align-self: flex-start;
+}
+
+.card[custom-type="detail"] {
+  align-self: center;
+}
+
+.card[custom-type="fully"] {
+  align-self: flex-end;
+}
+
+.boost-section {
+  width: 50%;
+  margin: 3rem auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.boost-section h2 {
+  color: white;
+}
+
+.boost-section button {
+  font-size: 1.25rem;
+  padding: 0.75rem 2.5rem;
+}
+
+@media screen and (max-width: 1400px) {
+  .hero-section img {
+    width: 750px;
+  }
+  .card[custom-type="brand"],
+  .card[custom-type="detail"],
+  .card[custom-type="fully"] {
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .hero-section img {
+    width: 600px;
+  }
+
+  .hero-info {
+    width: 50%;
+  }
+
+  .stat-info,
+  .boost-section {
+    width: 70%;
+  }
+  .card {
+    text-align: center;
+  }
+
+  .stat-card {
+    flex-direction: column;
+    gap: 6rem;
+    height: fit-content;
+  }
+
+  .card-icon {
+    left: calc(50% - 3rem);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-section {
+    margin-top: 5rem;
+    height: 800px;
+    flex-direction: column-reverse;
+  }
+
+  .hero-info {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-info button {
+    margin-top: 1rem;
+  }
+
+  .hero-section img {
+    width: 700px;
+    top: 0;
+  }
+
+  .stat-info,
+  .boost-section {
+    width: 80%;
+  }
+
+  .stat-wrapper {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .hero-section {
+    margin-top: 0;
+    height: 750px;
+  }
+  .hero-section img {
+    width: 600px;
+  }
+
+  .stat-info,
+  .boost-section {
+    width: 100%;
+  }
+}

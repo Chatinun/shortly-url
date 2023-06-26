@@ -1,0 +1,134 @@
+form {
+  border-radius: 0.5rem;
+  padding: 3rem 5rem;
+  background: url("/public/images/bg-shorten-desktop.svg");
+  background-color: var(--primary-violet);
+  contain: cover;
+  position: relative;
+}
+
+.shortener-form {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1rem;
+  height: 60px;
+}
+
+.shortener-form input {
+  flex: 1;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  padding: 0.5rem 2rem;
+  font-size: 1.25rem;
+}
+
+.shortener-form input::placeholder {
+  color: var(--neutral-grayish);
+  font-size: 1.25rem;
+}
+
+.shortener-form input.input-error {
+  border: 2px solid var(--secondary-red);
+}
+
+.shortener-form button {
+  border-radius: 0.5rem !important;
+  font-size: 1.25rem;
+  width: 200px;
+}
+
+.error-message {
+  font-style: italic;
+  position: absolute;
+  bottom: 0;
+  color: var(--secondary-red);
+  font-size: 0.75rem;
+}
+
+.link-list {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.shortened-link {
+  margin-top: 1rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  gap: 1rem;
+}
+
+.shortened-link .ori-url {
+  color: black;
+  flex: 1;
+  margin: 0;
+  overflow: hidden;
+}
+
+.shortened-link .short-url {
+  color: var(--primary-cyan);
+  margin: 0;
+}
+
+.shortened-link button {
+  border-radius: 0.5rem !important;
+  width: 100px;
+}
+
+.shortened-link button.copied {
+  background-color: var(--primary-violet);
+}
+
+.shortened-link button.copied:hover {
+  background-color: var(--primary-violet-a);
+}
+
+@media screen and (max-width: 992px) {
+  form {
+    padding: 2rem 3rem;
+  }
+  .shortener-form button {
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  form {
+    margin-top: 4rem;
+  }
+
+  .shortener-form {
+    height: fit-content;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .shortener-form button {
+    width: 100%;
+  }
+
+  .error-message {
+    top: 38%;
+  }
+
+  .shortened-link {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .shortened-link button {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .shortener-form input,
+  .shortener-form input::placeholder,
+  .shortener-form button {
+    font-size: 1rem;
+  }
+}
